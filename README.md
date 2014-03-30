@@ -13,19 +13,21 @@ Install via composer
 
 ## Creating application
 First you need to have base directory hierarchy:
-    /
+    <?php
+    /*
     -- app // web root
     -- -- public // web static files
     -- -- index.php // application start file
     -- src // application sources
     -- var // application files
     -- vendor // installed vendors
+    */
 
 You can use any directory's names. Default names defined as constants in Bun\\Core\\Application class
 You can redefine any of them in your own application index file. Create your application class:
-    -- src/AppName/Application.php
 
     <?php
+    # src/AppName/Application.php
     namespace AppName;
 
     class Application extends Bun\Core\Application
@@ -35,8 +37,8 @@ You can redefine any of them in your own application index file. Create your app
 
 Now in app/index.php file run you application.
 
-    -- app/index.php
     <?php
+    # app/index.php
 
     define('ENV', 'dev');
     $app = new AppName\Application(ENV);
