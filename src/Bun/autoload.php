@@ -24,5 +24,3 @@ class Autoload
 }
 
 spl_autoload_register(array(new Autoload(), 'autoload'), true);
-
-require_once __DIR__ .'/const.php';

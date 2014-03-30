@@ -1,0 +1,25 @@
+{
+    "name": "bun/bun",
+    "version": "1.0.0-beta",
+    "type": "library",
+    "description": "Light MVC framework with DI architecture",
+    "keywords": ["framework","mvc","dependency injection","DI"],
+    "homepage": "http://github.com/jakulov/bun",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yakov Akulov",
+            "email": "jakulov@gmail.com",
+            "homepage": "http://jakulov.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bun\\" : "src/"
+        }
+    }
+}
