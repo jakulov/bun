@@ -236,7 +236,10 @@ class BunSession implements ConfigAwareInterface, SessionStorageAwareInterface, 
      */
     public function get($key)
     {
-        $loaded = $this->loadFromGlobals();
+        $loaded = !$this->isStarted() ?
+            $this->loadFromGlobals() :
+            true;
+
         if ($loaded) {
             if (strpos($key, '.') !== false) {
                 $keyParts = explode('.', $key);
