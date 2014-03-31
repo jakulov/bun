@@ -1,5 +1,5 @@
 <?php
-namespace Bun\Migration;
+namespace Bun\Migration\Config;
 
 use Bun\Core\Config\AbstractConfig;
 

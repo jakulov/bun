@@ -1,7 +1,5 @@
 <?php
-namespace Bun\Core\Cache;
-
-use Bun\Core\Config\AbstractConfig;
+namespace Bun\Core\Config;
 
 /**
  * Class CacheConfig

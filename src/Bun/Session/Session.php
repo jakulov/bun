@@ -19,7 +19,6 @@ class Session extends AbstractModule
         'bun',
     );
     protected $config = array(
-        'Session',
         'Container',
         'Event',
     );

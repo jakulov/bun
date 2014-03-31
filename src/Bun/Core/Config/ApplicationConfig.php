@@ -119,8 +119,8 @@ class ApplicationConfig extends AbstractConfig
      */
     protected function loadApplicationConfig(ApplicationInterface $application, $configDir, $ignore = null)
     {
-        $dirHandler = opendir($configDir);
-        while ($appConfig = readdir($dirHandler)) {
+        $dirHandler = (is_dir($configDir)) ? opendir($configDir) : false;
+        while ($dirHandler && $appConfig = readdir($dirHandler)) {
             if ($appConfig !== '.' && $appConfig !== '..' && is_file($configDir . DIRECTORY_SEPARATOR . $appConfig)) {
                 $appConfigClass =
                     $application->getApplicationName() . '\\' . self::CONFIG_NAMESPACE . '\\' .
