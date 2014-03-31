@@ -53,7 +53,8 @@ Now in app/index.php file run you application.
     <?php
     # app/index.php
 
-    require __DIR__ .'/../src/Autoload.php';
+    require __DIR__ .'/../vendor/autoload.php'; // require vendors
+    require __DIR__ .'/../src/Autoload.php'; // require application
     define('ENV', 'dev');
     $app = new AppName\Application(ENV);
     $app->run();
@@ -95,4 +96,10 @@ Setting up Nginx to work with Bun Framework application is quite easy:
 
 
 ## Templates
-Bun Framework controller allows to use native phtml templates, Twig templates and Smarty2 templates. To use last ones you need to install Twig and Smarty2 packages in your application by yourself.
+Bun Framework controller allows to use native phtml templates, Twig templates and Smarty2 templates. To use last ones you need to install Twig and Smarty2 packages in your application by yourself. For example with composer:
+
+    "require": {
+        "bun/bun": "master-dev",
+        "twig/twig" : "1.*"
+    }
+
