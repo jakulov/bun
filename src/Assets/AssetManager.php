@@ -42,7 +42,7 @@ class AssetManager implements ConfigAwareInterface
         'zip'  => 'Content-type: application/zip',
         'exe'  => 'Content-type: application/octet-stream',
         'odt'  => 'Content-type: application/vnd.oasis.opendocument.text',
-        'woff'  => 'Content-type: application/x-font-woff',
+        'woff' => 'Content-type: application/x-font-woff',
     );
 
     public static $defaultHeader = 'application/force-download';
@@ -185,6 +185,7 @@ class AssetManager implements ConfigAwareInterface
             }
             $newFileName = $this->getAssetPublicFileName($path, $assetName, $publicAlias);
             if (isset($assetParams['less']) && $assetParams['less']) {
+                require_once BUN_DIR . '/../lib/Less/lessc.inc.php';
                 $parseFile = $files[0];
                 $lessc = new \lessc();
                 $lessc->setImportDir(dirname($parseFile));

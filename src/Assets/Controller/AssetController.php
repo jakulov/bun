@@ -142,7 +142,7 @@ class AssetController extends AbstractController
                     // getting asset for bun module
                     if (isset($pathParts[2]) && in_array($pathParts[2], $applicationConfig->getBunModules())) {
                         if (isset($pathParts[3])) {
-                            $assetDir = LIB_DIR . DIRECTORY_SEPARATOR . 'Bun' . DIRECTORY_SEPARATOR . $pathParts[2] .
+                            $assetDir = LIB_DIR . DIRECTORY_SEPARATOR . BUN_DIR . DIRECTORY_SEPARATOR . $pathParts[2] .
                                 DIRECTORY_SEPARATOR . AssetManager::ASSET_DIR . DIRECTORY_SEPARATOR .
                                 $pathParts[3];
                             for ($i = $pathPartsCount - 2; $i > 3; $i--) {

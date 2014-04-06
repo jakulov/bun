@@ -11,6 +11,7 @@ use Bun\Core\Event\EventDispatcherInterface;
 use Bun\Core\Storage\StorageInterface;
 use Bun\PDO\Event\QueryEvent;
 
+require_once BUN_DIR . '/../lib/FluentPDO/FluentPDO.php';
 /**
  * Class PdoStorage
  *

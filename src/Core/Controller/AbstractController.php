@@ -185,7 +185,7 @@ abstract class AbstractController implements ControllerInterface
         $twigLoader = new \Twig_Loader_Filesystem(
             array(
                 $this->application->getApplicationDir() . DIRECTORY_SEPARATOR . self::VIEW_DIR,
-                LIB_DIR . DIRECTORY_SEPARATOR . 'Bun',
+                LIB_DIR . DIRECTORY_SEPARATOR . BUN_DIR,
             )
         );
 
