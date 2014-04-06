@@ -185,7 +185,7 @@ class AssetManager implements ConfigAwareInterface
             }
             $newFileName = $this->getAssetPublicFileName($path, $assetName, $publicAlias);
             if (isset($assetParams['less']) && $assetParams['less']) {
-                require_once BUN_DIR . '/../lib/Less/lessc.inc.php';
+                require_once __DIR__ . '/../../lib/Less/lessc.inc.php';
                 $parseFile = $files[0];
                 $lessc = new \lessc();
                 $lessc->setImportDir(dirname($parseFile));
